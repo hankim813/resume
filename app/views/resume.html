@@ -1,17 +1,26 @@
-<div class="row google-header-bar">
-	<div class="d-ib fl-l p-lg">
-		<a ui-sref="home">
+<header class="row google-header">
+	<div class="p-lg col span_1 ta-c">
+		<a ui-sref="home()">
 			<img src="images/google.png" alt="google-logo" class="google-logo-sm">
 		</a>
 	</div>
-	<div class="d-ib fl-l pt-lg pl-lg pb-lg w-2-5">
-	  <input type="text" value="Why {{resume.companyName}} should hire Han Kim" class="m-a fz-md fw-n google-input">
-	</div>
-	<div class="google-search-icon-div d-ib fl-l m-0 mt-lg">
-	  <i class="fa fa-search google-search-icon"></i>
+	<div class="pt-lg pl-lg pb-lg col span_6">
+	  <input type="text" value="Why {{resume.companyName}} should hire Han Kim" class="m-a fz-md fw-n d-ib fl-l google-input">
+
+		<div class="google-search-icon-div d-ib fl-l m-0 btn">
+		  <i class="fa fa-search google-search-icon"></i>
+		</div>
 	</div>
 
-	<div class="pos-a t-0 r-0">
-		<img src="images/header-han.png" alt="header-placeholder">
+	<div class="pt-lg col span_1 ta-c fl-r">
+		<button class="c-w ggbg bdrs-2 bd-n p-5-15 ff-a fz-md btn">Hire Han</button>
 	</div>
-</div>
+
+	<div class="pt-lg col span_1 ta-r fl-r">
+		<img src="images/settings.png" alt="settings">
+	</div>
+</header>
+
+<section class="row nav-links">
+	<div ng-include src="'views/navBar.html'"></div>
+</section>

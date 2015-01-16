@@ -54,5 +54,61 @@ angular
   		controllerAs: 'resume'
   	})
 
+    .state('resume.web', {
+      url: '/web',
+      resolve: {
+        company: function($stateParams) {
+          return $stateParams.company;
+        }
+      },
+      views: {
+        'web': {
+          templateUrl: 'views/web.html'
+        }
+      }
+    })
+
+    .state('resume.videos', {
+      url: '/videos',
+      resolve: {
+        company: function($stateParams) {
+          return $stateParams.company;
+        }
+      },
+      views: {
+        'videos': {
+          templateUrl: 'views/videos.html'
+        }
+      }
+    })
+
+    .state('resume.images', {
+      url: '/images',
+      resolve: {
+        company: function($stateParams) {
+          return $stateParams.company;
+        }
+      },
+      views: {
+        'images': {
+          templateUrl: 'views/images.html'
+        }
+      }
+    })
+
+    .state('resume.news', {
+      url: '/news',
+      resolve: {
+        company: function($stateParams) {
+          return $stateParams.company;
+        }
+      },
+      views: {
+        'news': {
+          templateUrl: 'views/news.html'
+        }
+      }
+    })
+
   	$urlRouterProvider.otherwise('/');
   });

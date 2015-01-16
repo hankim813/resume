@@ -1,0 +1,12 @@
+<div class="header-links">
+	<a ui-sref="resume.web({company: '{{resume.companyName}}'})" ng-class="{ active: resume.isActive('/{{resume.companyName}}/resume/web')}">Web</a>
+	<a ui-sref="resume.videos({company: '{{resume.companyName}}'})" ng-class="{ active: resume.isActive('/{{resume.companyName}}/resume/videos')}">Videos</a>
+	<a ui-sref="resume.images({company: '{{resume.companyName}}'})" ng-class="{ active: resume.isActive('/{{resume.companyName}}/resume/images')}">Images</a>
+	<a ui-sref="resume.news({company: '{{resume.companyName}}'})" ng-class="{ active: resume.isActive('/{{resume.companyName}}/resume/news')}">News</a>
+	<a ui-sref="#/">More <i class="fa fa-caret-down"></i></a>
+</div>
+
+<div ui-view="web"></div>
+<div ui-view="videos"></div>
+<div ui-view="images"></div>
+<div ui-view="news"></div>
