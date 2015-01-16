@@ -39,8 +39,16 @@
 .t-0 {
   top: 0; }
 
+.t-2 {
+  top: 2%;
+}
+
 .r-0 {
   right: 0; }
+
+.r-2 {
+  right: 2%;
+}
 
 .b-0 {
   bottom: 0; }
@@ -367,13 +375,13 @@
   margin-top: 13%; }
 
 .mr-xl {
-  margin-right: 13%; }
+  margin-right: 25px; }
 
 .mb-xl {
   margin-bottom: 13%; }
 
 .ml-xl {
-  margin-left: 13%; }
+  margin-left: 25px; }
 
 /* PADDING */
 .p-0 {

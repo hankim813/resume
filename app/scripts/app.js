@@ -49,21 +49,21 @@ angular
   				return $stateParams.company;
   			}
   		},
-  		templateUrl: 'views/resume.html',
+  		templateUrl: 'views/landing.html',
   		controller: 'ResumeCtrl',
   		controllerAs: 'resume'
   	})
 
-    .state('resume.web', {
-      url: '/web',
+    .state('resume.experiences', {
+      url: '/experiences',
       resolve: {
         company: function($stateParams) {
           return $stateParams.company;
         }
       },
       views: {
-        'web': {
-          templateUrl: 'views/web.html'
+        'experiences': {
+          templateUrl: 'views/experiences.html'
         }
       }
     })
@@ -96,16 +96,16 @@ angular
       }
     })
 
-    .state('resume.news', {
-      url: '/news',
+    .state('resume.projects', {
+      url: '/projects',
       resolve: {
         company: function($stateParams) {
           return $stateParams.company;
         }
       },
       views: {
-        'news': {
-          templateUrl: 'views/news.html'
+        'projects': {
+          templateUrl: 'views/projects.html'
         }
       }
     })

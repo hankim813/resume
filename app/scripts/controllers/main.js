@@ -18,7 +18,6 @@ angular.module('resumeApp')
   	this.companyName = company;
 
   	this.isActive = function(currentRoute) {
-  		console.log(currentRoute);
   		return currentRoute === $location.path();
   	}
   });
