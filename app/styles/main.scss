@@ -217,7 +217,7 @@ a:visited {
 
 .intro-description {
 	font-size: 13px;
-	line-height: 15px;
+	line-height: 17px;
 	color: #222;
 }
 
@@ -227,7 +227,7 @@ a:visited {
 
 .intro-links {
 	position: absolute;
-	top: 0;
+	top: 5%;
 	right: 3%;
 }
 
@@ -252,5 +252,27 @@ a:visited {
 
 .item-header-link {
 	font-size: 18px;
+	line-height: 20px;
+	color: #1e0fbe !important;
+}
+
+.item-url {
+	font-size: 14px;
+	line-height: 14px;
+	color: #006621;
+	margin: 0;
+}
+
+.date {
+	color: #808080;
+}
+
+.item-description {
+	color: #545454;
+	font-size: small;
+	line-height: 1.4;
+}
+
+.item-description a {
 	color: #1e0fbe !important;
 }
