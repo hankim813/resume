@@ -1,0 +1,28 @@
+<header class="row google-header">
+	<div class="p-lg col span_1 ta-c">
+		<a ui-sref="home()">
+			<img src="images/google.png" alt="google-logo" class="google-logo-sm">
+		</a>
+	</div>
+	<div class="pt-lg pl-lg pb-lg col span_6">
+	  <input type="text" value="why {{resume.companyName}} should hire Han Kim" class="m-a fz-md fw-n d-ib fl-l google-input">
+
+		<div class="google-search-icon-div d-ib fl-l m-0 btn">
+		  <i class="fa fa-search google-search-icon"></i>
+		</div>
+	</div>
+
+	<div class="pt-lg pos-a t-0 r-2">
+		<button class="c-w ta-c ggbg bdrs-2 bd-n p-5-15 ff-a fz-md btn ml-md">Hire Han</button>
+	</div>
+</header>
+
+
+<div class="row nav-links">
+	<div ng-include src="'views/navBar.html'"></div>
+</div>
+
+<div class="row">
+	<div ng-include src="'views/lists.html'"></div>
+</div>
+
