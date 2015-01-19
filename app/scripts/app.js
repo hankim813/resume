@@ -23,7 +23,7 @@ angular
   		url: '/',
   		resolve: {
   			company: function() {
-  				return "I";
+  				return 'I';
   			}
   		},
   		templateUrl: 'views/main.html',
