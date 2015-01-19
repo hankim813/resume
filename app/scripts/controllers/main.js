@@ -13,7 +13,11 @@ angular.module('resumeApp')
   	this.companyName = company;
   })
 
-  .controller('ResumeCtrl', function (company) {
+  .controller('ResumeCtrl', function (company, $location) {
   	
   	this.companyName = company;
+
+  	this.isActive = function(currentRoute) {
+  		return currentRoute === $location.path();
+  	}
   });
