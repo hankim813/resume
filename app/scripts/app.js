@@ -11,7 +11,8 @@
 angular
   .module('resumeApp', [
     'ngAnimate',
-    'ui.router'
+    'ui.router',
+    'wu.masonry'
   ])
 
   .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
@@ -22,7 +23,7 @@ angular
   		url: '/',
   		resolve: {
   			company: function() {
-  				return "you";
+  				return "I";
   			}
   		},
   		templateUrl: 'views/main.html',
@@ -76,7 +77,9 @@ angular
       url: '/images',
       views: {
         'images': {
-          templateUrl: 'views/images.html'
+          templateUrl: 'views/images.html',
+          controller: 'GalleryCtrl',
+          controllerAs: 'gallery'
         }
       }
     })
@@ -94,9 +97,7 @@ angular
       url: '/hire-han',
       views: {
         'hire': {
-          templateUrl: 'views/hire.html',
-          controller: 'HireController',
-          controllerAs: 'hire'
+          templateUrl: 'views/hire.html'
         }
       }
     });
