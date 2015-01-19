@@ -103,6 +103,10 @@ body {
 	padding: 5px 15px;
 }
 
+.pt-lg2 {
+	padding-top: 25px;
+}
+
 /* hooks */
 
 .btn:hover {
@@ -234,6 +238,11 @@ a:visited {
 
 /* Google Listings */
 
+.result-stats {
+	color: #808080;
+	font-size: small;
+}
+
 .item-header-link {
 	font-size: 18px;
 	line-height: 20px;
@@ -264,5 +273,4 @@ a:visited {
 .footer {
 	background-color: #f2f2f2;
 	color: #aaa;
-	font-size: small;
 }

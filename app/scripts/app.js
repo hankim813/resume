@@ -14,7 +14,7 @@ angular
     'ui.router'
   ])
 
-  .config(function($stateProvider, $urlRouterProvider) {
+  .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
   	$stateProvider
 
@@ -56,11 +56,6 @@ angular
 
     .state('resume.experiences', {
       url: '/experiences',
-      resolve: {
-        company: function($stateParams) {
-          return $stateParams.company;
-        }
-      },
       views: {
         'experiences': {
           templateUrl: 'views/experiences.html'
@@ -70,11 +65,6 @@ angular
 
     .state('resume.videos', {
       url: '/videos',
-      resolve: {
-        company: function($stateParams) {
-          return $stateParams.company;
-        }
-      },
       views: {
         'videos': {
           templateUrl: 'views/videos.html'
@@ -84,11 +74,6 @@ angular
 
     .state('resume.images', {
       url: '/images',
-      resolve: {
-        company: function($stateParams) {
-          return $stateParams.company;
-        }
-      },
       views: {
         'images': {
           templateUrl: 'views/images.html'
@@ -98,11 +83,6 @@ angular
 
     .state('resume.projects', {
       url: '/projects',
-      resolve: {
-        company: function($stateParams) {
-          return $stateParams.company;
-        }
-      },
       views: {
         'projects': {
           templateUrl: 'views/projects.html'
@@ -110,5 +90,16 @@ angular
       }
     })
 
+    .state('resume.hire', {
+      url: '/hire-han',
+      views: {
+        'hire': {
+          templateUrl: 'views/hire.html',
+          controller: 'HireController',
+          controllerAs: 'hire'
+        }
+      }
+    });
+
   	$urlRouterProvider.otherwise('/');
-  });
+  }]);
