@@ -88,7 +88,9 @@ angular
       url: '/projects',
       views: {
         'projects': {
-          templateUrl: 'views/projects.html'
+          templateUrl: 'views/projects.html',
+          controller: 'ProjectCtrl',
+          controllerAs: 'project'
         }
       }
     })

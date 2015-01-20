@@ -35,9 +35,9 @@ angular.module('resumeApp')
   }])
 
   .controller('GalleryCtrl', [function () {
-  	var vm = this;
+  	var vm 		= this;
 
-  	vm.album = [
+  	vm.album 	= [
   		{ src: 'images/han/onstage.jpg'},
   		{ src: 'images/han/boston.jpg'},
   		{ src: 'images/han/lovedogs.jpg'},
@@ -56,6 +56,34 @@ angular.module('resumeApp')
   		{ src: 'images/han/malaysia.jpg'},
   		{ src: 'images/han/niece.jpg'}
   	];
+  }])
 
+  .controller('ProjectCtrl', ['$window', function ($window) {
+  	var vm 					= this;
 
+  	vm.glasshopper 	= [
+  		{ src: 'images/glasshopperlogo.png'},
+  		{ src: 'images/gh1.png'},
+  		{ src: 'images/gh2.png'},
+  		{ src: 'images/gh3.png'},
+  		{ src: 'images/gh4.png'},
+  		{ src: 'images/gh5.png'},
+  		{ src: 'images/gh6.png'},
+  		{ src: 'images/gh7.png'},
+  		{ src: 'images/gh8.png'}
+  	];
+
+  	vm.circle 			= [
+	  	{ src: 'images/c1.png'},
+	  	{ src: 'images/c2.png'},
+	  	{ src: 'images/c3.png'},
+	  	{ src: 'images/c4.png'},
+	  	{ src: 'images/c5.png'},
+	  	{ src: 'images/c6.png'}
+  	];
+
+  	vm.openRepos 		= function () {
+  		$window.open('https://github.com/hankim813/glasshopper-client', '_blank');
+  		$window.open('https://github.com/hankim813/glasshopper', '_blank');
+  	};
   }]);
