@@ -23,7 +23,7 @@ angular
   		url: '/',
   		resolve: {
   			company: function() {
-  				return "I";
+  				return 'I';
   			}
   		},
   		templateUrl: 'views/main.html',
@@ -88,7 +88,9 @@ angular
       url: '/projects',
       views: {
         'projects': {
-          templateUrl: 'views/projects.html'
+          templateUrl: 'views/projects.html',
+          controller: 'ProjectCtrl',
+          controllerAs: 'project'
         }
       }
     })

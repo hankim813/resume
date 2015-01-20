@@ -257,7 +257,7 @@ a:visited {
 	font-size: 14px;
 	line-height: 14px;
 	color: #006621;
-	margin: 0;
+	margin: 3px 0 0 0;
 }
 
 .date {
@@ -283,6 +283,47 @@ a:visited {
 
 .gallery {
 	width: 200px;
-	margin: 3px 15px 3px 0;
+	margin: 3px 10px 3px 0;
 	box-shadow: 1px 1px 1px #A4A4A4;
+	opacity: 0.8;
+	transition: all 0.1s ease-out;
+	-webkit-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+	z-index: 0;
+	position: relative;
 }
+
+.gallery:hover {
+	opacity: 1;
+	transition: all 0.1s ease-out;
+	-webkit-transform: scale(1.5, 1.5);
+	-moz-transform: scale(1.5, 1.5);
+	-ms-transform: scale(1.5, 1.5);
+	z-index: 1;
+}
+
+/* blogs */
+
+.posts img {
+	width: 99%;
+	margin-right: 1%;
+	box-shadow: 1px 1px 1px #A4A4A4;
+	opacity: 0.7;
+	transition: all 0.1s ease-out;
+	-webkit-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+	z-index: 0;
+	position: relative;
+}
+
+.posts img:hover {
+	opacity: 1;
+	transition: all 0.1s ease-out;
+	-webkit-transform: scale(1.5, 1.5);
+	-moz-transform: scale(1.5, 1.5);
+	-ms-transform: scale(1.5, 1.5);
+	z-index: 1;
+}
+
