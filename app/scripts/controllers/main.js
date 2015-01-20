@@ -82,6 +82,39 @@ angular.module('resumeApp')
 	  	{ src: 'images/c6.png'}
   	];
 
+  	vm.sas					= [
+	  	{ src: 'images/sas3.png'},
+	  	{ src: 'images/sas1.png'},
+	  	{ src: 'images/sas2.png'}
+  	];
+
+  	vm.glc 					= [
+	  	{ src: 'images/glc6.png'},
+	  	{ src: 'images/glc5.png'},
+	  	{ src: 'images/glc4.png'},
+	  	{ src: 'images/glc3.png'},
+	  	{ src: 'images/glc2.png'},
+	  	{ src: 'images/glc1.png'}
+  	];
+
+  	vm.hoop					= [
+	  	{ src: 'images/hoop1.png'},
+	  	{ src: 'images/hoop2.png'},
+	  	{ src: 'images/hoop3.png'}
+  	];
+
+  	vm.can 					= [
+	  	{ src: 'images/can1.png'},
+	  	{ src: 'images/can2.png'},
+	  	{ src: 'images/can3.png'}
+  	];
+
+  	vm.bae 					= [
+	  	{ src: 'images/bae3.png'},
+	  	{ src: 'images/bae2.png'},
+	  	{ src: 'images/bae1.png'}
+  	];
+
   	vm.openRepos 		= function () {
   		$window.open('https://github.com/hankim813/glasshopper-client', '_blank');
   		$window.open('https://github.com/hankim813/glasshopper', '_blank');
