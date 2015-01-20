@@ -8,16 +8,28 @@
  * Controller of the resumeApp
  */
 angular.module('resumeApp')
+
   .controller('MainCtrl', ['company', function (company) {
-  	var vm = this;
-  	vm.companyName = company;
+  	var vm 						= this;
+  	vm.companyName 		= company;
   }])
 
   .controller('ResumeCtrl', ['company', '$location', function (company, $location) {
-  	var vm = this;
-  	vm.companyName = company;
+  	var vm 						= this;
+  	vm.companyName 		= company;
+  	vm.blogPosts 			= false;
+  	vm.blogMessage 		= 'Click to view its most popular blog posts.';
 
-  	vm.isActive = function(currentRoute) {
+  	vm.toggleBlogPosts 	= function (message) {
+  		vm.blogPosts 			= !vm.blogPosts;
+  		if (message === 'Click to view its most popular blog posts.') {
+  			vm.blogMessage 	= 'Click to close most popular blog posts.';
+  		} else {
+  			vm.blogMessage 	= 'Click to view its most popular blog posts.';
+  		};
+  	};
+
+  	vm.isActive 			= function (currentRoute) {
   		return currentRoute === $location.path();
   	};
   }])

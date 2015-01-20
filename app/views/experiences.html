@@ -56,7 +56,29 @@
 	<br><br>
 	Learned about SEO, blogging, and Google Analytics.
 	<br><br>
-	<a href="#">Click to view its most popular blog posts.</a></p>
+	<a ng-click="resume.toggleBlogPosts(resume.blogMessage)" class="cur-p">{{resume.blogMessage}}</a></p>
+	<div class="row posts ta-c" ng-show="resume.blogPosts">
+		<div class="col span_3">
+			<a href="http://www.startedtomorrow.com/the-7-must-have-habits-to-lead-a-boss-life/" target="_blank">
+				<img src="http://i.imgur.com/24DgaQd.jpg" alt="The 7 Must Have Habits To Lead A Boss Life">
+			</a>
+		</div>
+		<div class="col span_3">
+			<a href="http://www.startedtomorrow.com/why-partying-isnt-such-a-bad-thing/" target="_blank">
+				<img src="http://i.imgur.com/JPxGd3X.png" alt="Why Partying Isnt Such a Bad Thing">
+			</a>
+		</div>
+		<div class="col span_3">
+			<a href="http://www.startedtomorrow.com/one-business-competition-changed-everything/" target="_blank">
+				<img src="http://i.imgur.com/QaQ0JDJ.png" alt="One Business Competition Changed Everything">
+			</a>
+		</div>
+		<div class="col span_3">
+			<a href="http://www.startedtomorrow.com/daquan-oliver-a-21-year-old-redefining-the-hustle/" target="_blank">
+				<img src="http://i.imgur.com/Rne9TvK.jpg" alt="Daquan Oliver, a 21 Year Old Redefining The Hustle">
+			</a>
+		</div>
+	</div>
 </div>
 
 <div class="row mb-lg">
