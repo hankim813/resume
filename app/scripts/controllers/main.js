@@ -9,12 +9,14 @@
  */
 angular.module('resumeApp')
 
-  .controller('MainCtrl', ['company', function (company) {
+  .controller('MainCtrl', ['company', '$timeout', function (company, $timeout) {
   	var vm 						= this;
   	vm.companyName 		= company;
+
+  	$timeout = twttr.widgets.load();
   }])
 
-  .controller('ResumeCtrl', ['company', '$location', function (company, $location) {
+  .controller('ResumeCtrl', ['company', '$location', '$timeout', function (company, $location, $timeout) {
   	var vm 						= this;
   	vm.companyName 		= company;
   	vm.blogPosts 			= false;
@@ -32,9 +34,11 @@ angular.module('resumeApp')
   	vm.isActive 			= function (currentRoute) {
   		return currentRoute === $location.path();
   	};
+
+  	$timeout = twttr.widgets.load();
   }])
 
-  .controller('GalleryCtrl', [function () {
+  .controller('GalleryCtrl', ['$timeout', function ($timeout) {
   	var vm 		= this;
 
   	vm.album 	= [
@@ -56,9 +60,11 @@ angular.module('resumeApp')
   		{ src: 'images/han/malaysia.jpg'},
   		{ src: 'images/han/niece.jpg'}
   	];
+
+  	$timeout = twttr.widgets.load();
   }])
 
-  .controller('ProjectCtrl', ['$window', function ($window) {
+  .controller('ProjectCtrl', ['$window', '$timeout', function ($window, $timeout) {
   	var vm 					= this;
 
   	vm.glasshopper 	= [
@@ -119,4 +125,6 @@ angular.module('resumeApp')
   		$window.open('https://github.com/hankim813/glasshopper-client', '_blank');
   		$window.open('https://github.com/hankim813/glasshopper', '_blank');
   	};
+
+  	$timeout = twttr.widgets.load();
   }]);
