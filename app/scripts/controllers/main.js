@@ -18,9 +18,9 @@ angular.module('resumeApp')
 		  		})();
 		  	} else {
 			  	$timeout = twttr.widgets.load();
-		  	};
+		  	}
 			}
-		}
+		};
 	}])
 
   .controller('MainCtrl', ['company', 'TwitterService', function (company, TwitterService) {
@@ -42,7 +42,7 @@ angular.module('resumeApp')
   			vm.blogMessage 	= 'Click to close most popular blog posts.';
   		} else {
   			vm.blogMessage 	= 'Click to view its most popular blog posts.';
-  		};
+  		}
   	};
 
   	vm.isActive 			= function (currentRoute) {
