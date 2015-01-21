@@ -13,7 +13,7 @@ angular.module('resumeApp')
   	var vm 						= this;
   	vm.companyName 		= company;
 
-  	$timeout = twttr.widgets.load();
+  	// $timeout = twttr.widgets.load();
   }])
 
   .controller('ResumeCtrl', ['company', '$location', '$timeout', function (company, $location, $timeout) {
