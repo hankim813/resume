@@ -159,10 +159,12 @@ body {
 
 a {
 	text-decoration: none;
+	outline: none;
 }
 
 a:hover {
 	text-decoration: underline;
+	outline: none;
 }
 
 a:focus {
@@ -171,6 +173,7 @@ a:focus {
 
 a:visited {
 	color: inherit;
+	outline: none;
 }
 
 /* imagebox */
