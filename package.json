@@ -2,7 +2,9 @@
   "name": "resume",
   "version": "0.0.0",
   "dependencies": {
-    "angular-ui-router": "^0.2.13"
+    "angular-ui-router": "^0.2.13",
+    "express": "^4.11.1",
+    "gzippo": "^0.2.0"
   },
   "devDependencies": {
     "grunt": "^0.4.1",
