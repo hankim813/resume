@@ -9,14 +9,28 @@
  */
 angular.module('resumeApp')
 
-  .controller('MainCtrl', ['company', '$timeout', function (company, $timeout) {
+	.factory('TwitterService', ['$timeout', function ($timeout) {
+		return {
+			load: function () {
+		  	if (typeof twttr === 'undefined') {
+		  		(function() {
+		  			!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+		  		})();
+		  	} else {
+			  	$timeout = twttr.widgets.load();
+		  	};
+			}
+		}
+	}])
+
+  .controller('MainCtrl', ['company', 'TwitterService', function (company, TwitterService) {
   	var vm 						= this;
   	vm.companyName 		= company;
 
-  	// $timeout = twttr.widgets.load();
+  	TwitterService.load();
   }])
 
-  .controller('ResumeCtrl', ['company', '$location', '$timeout', function (company, $location, $timeout) {
+  .controller('ResumeCtrl', ['company', '$location', 'TwitterService', function (company, $location, TwitterService) {
   	var vm 						= this;
   	vm.companyName 		= company;
   	vm.blogPosts 			= false;
@@ -35,10 +49,10 @@ angular.module('resumeApp')
   		return currentRoute === $location.path();
   	};
 
-  	$timeout = twttr.widgets.load();
+  	TwitterService.load();
   }])
 
-  .controller('GalleryCtrl', ['$timeout', function ($timeout) {
+  .controller('GalleryCtrl', [function () {
   	var vm 		= this;
 
   	vm.album 	= [
@@ -60,11 +74,9 @@ angular.module('resumeApp')
   		{ src: 'images/han/malaysia.jpg'},
   		{ src: 'images/han/niece.jpg'}
   	];
-
-  	$timeout = twttr.widgets.load();
   }])
 
-  .controller('ProjectCtrl', ['$window', '$timeout', function ($window, $timeout) {
+  .controller('ProjectCtrl', ['$window', function ($window) {
   	var vm 					= this;
 
   	vm.glasshopper 	= [
@@ -126,5 +138,4 @@ angular.module('resumeApp')
   		$window.open('https://github.com/hankim813/glasshopper', '_blank');
   	};
 
-  	$timeout = twttr.widgets.load();
   }]);
