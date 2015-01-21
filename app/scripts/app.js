@@ -11,10 +11,11 @@
 angular
   .module('resumeApp', [
     'ngAnimate',
-    'ui.router'
+    'ui.router',
+    'wu.masonry'
   ])
 
-  .config(function($stateProvider, $urlRouterProvider) {
+  .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
   	$stateProvider
 
@@ -22,7 +23,7 @@ angular
   		url: '/',
   		resolve: {
   			company: function() {
-  				return "you";
+  				return 'I';
   			}
   		},
   		templateUrl: 'views/main.html',
@@ -49,10 +50,59 @@ angular
   				return $stateParams.company;
   			}
   		},
-  		templateUrl: 'views/resume.html',
+  		templateUrl: 'views/landing.html',
   		controller: 'ResumeCtrl',
   		controllerAs: 'resume'
   	})
 
+    .state('resume.experiences', {
+      url: '/experiences',
+      views: {
+        'experiences': {
+          templateUrl: 'views/experiences.html'
+        }
+      }
+    })
+
+    .state('resume.videos', {
+      url: '/videos',
+      views: {
+        'videos': {
+          templateUrl: 'views/videos.html'
+        }
+      }
+    })
+
+    .state('resume.images', {
+      url: '/images',
+      views: {
+        'images': {
+          templateUrl: 'views/images.html',
+          controller: 'GalleryCtrl',
+          controllerAs: 'gallery'
+        }
+      }
+    })
+
+    .state('resume.projects', {
+      url: '/projects',
+      views: {
+        'projects': {
+          templateUrl: 'views/projects.html',
+          controller: 'ProjectCtrl',
+          controllerAs: 'project'
+        }
+      }
+    })
+
+    .state('resume.hire', {
+      url: '/hire-han',
+      views: {
+        'hire': {
+          templateUrl: 'views/hire.html'
+        }
+      }
+    });
+
   	$urlRouterProvider.otherwise('/');
-  });
+  }]);

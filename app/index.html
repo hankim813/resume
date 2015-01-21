@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Han Kim | Resume</title>
     <meta name="description" content="Han Kim's Resume">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -20,15 +20,9 @@
   </head>
   <body ng-app="resumeApp">
 
-    <main class="container row">
+    <div class="container row">
       <div ui-view></div>
-    </main>
-
-    <footer class="row ta-c footer-tag">
-      <div class="footer-p">
-        <p>No copyright intended.</p>
-      </div>
-    </footer>
+    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <!--  <script>
@@ -50,9 +44,22 @@
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/jquery-bridget/jquery.bridget.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/get-style-property/get-style-property.js"></script>
+    <script src="bower_components/get-size/get-size.js"></script>
+    <script src="bower_components/eventie/eventie.js"></script>
+    <script src="bower_components/doc-ready/doc-ready.js"></script>
+    <script src="bower_components/eventEmitter/EventEmitter.js"></script>
+    <script src="bower_components/matches-selector/matches-selector.js"></script>
+    <script src="bower_components/outlayer/item.js"></script>
+    <script src="bower_components/outlayer/outlayer.js"></script>
+    <script src="bower_components/masonry/masonry.js"></script>
+    <script src="bower_components/imagesloaded/imagesloaded.js"></script>
+    <script src="bower_components/angular-masonry/angular-masonry.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -61,5 +68,8 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/vendor/respond.min.js"></script>
         <!-- endbuild -->
+
+        <!-- Twitter -->
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </body>
 </html>
