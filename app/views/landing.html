@@ -1,27 +1,28 @@
-<header class="row google-header">
-	<div class="p-lg col span_1 ta-l">
-		<a ui-sref="home()">
-			<img src="images/google.png" alt="google-logo" class="google-logo-sm">
-		</a>
-	</div>
-	<div class="pt-lg pl-lg pb-lg col span_6">
-	  <input type="text" value="why should {{resume.companyName}} hire Han Kim" class="m-a fz-md fw-n d-ib fl-l google-input-2">
-
-		<div class="google-search-icon-div d-ib fl-l m-0 btn">
-		  <i class="fa fa-search google-search-icon"></i>
+<header class="google-header">
+	<div class="row">
+		<div class="col span_1 mt-lg pl-lg">
+			<a ui-sref="home()">
+				<img src="images/google.png" alt="google-logo" class="google-logo-sm">
+			</a>
 		</div>
-	</div>
+		<div class="pt-lg pl-lg pb-lg col span_6">
+		  <input type="text" value="why should {{resume.companyName}} hire Han Kim" class="m-a fz-md fw-n d-ib fl-l google-input-2">
 
-	<div class="pt-lg pr-lg pos-a t-0 r-2 ta-r">
-		<a ui-sref="resume.hire">
-			<button class="c-w ta-c ggbg bdrs-2 bd-n p-5-15 ff-a fz-md btn ml-md">Hire Han</button>
-		</a>
+			<div class="google-search-icon-div d-ib fl-l m-0 btn">
+			  <i class="fa fa-search google-search-icon"></i>
+			</div>
+		</div>
+
+		<div class="pt-lg pr-lg pos-a t-0 r-2 ta-r">
+			<a ui-sref="resume.hire">
+				<button class="c-w ta-c ggbg bdrs-2 bd-n p-5-15 ff-a fz-md btn ml-md">Hire Han</button>
+			</a>
+		</div>
 	</div>
 </header>
 
-
-<div class="row nav-links">
-	<div ng-include src="'views/navBar.html'"></div>
+<div class="nav-links">
+	<div ng-include src="'views/navBar.html'" class="m-a w-5-6"></div>
 </div>
 
 <div class="row">
