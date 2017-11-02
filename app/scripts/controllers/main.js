@@ -61,7 +61,7 @@ angular.module('resumeApp')
   		{ src: 'images/han/3.JPG'},
   		{ src: 'images/han/4.JPG'},
   		{ src: 'images/han/5.JPG'},
-  		{ src: 'images/han/6.JPG'},
+  		{ src: 'images/han/nyy.JPG'},
   		{ src: 'images/han/7.JPG'},
   		{ src: 'images/han/8.JPG'},
   		{ src: 'images/han/9.JPG'},
@@ -70,13 +70,12 @@ angular.module('resumeApp')
   		{ src: 'images/han/12.JPG'},
   		{ src: 'images/han/boston.jpg'},
   		{ src: 'images/han/ballpit.jpg'},
-  		{ src: 'images/han/dance.jpg'},
   		{ src: 'images/han/newyears.jpg'},
   		{ src: 'images/han/dance.jpg'},
   		{ src: 'images/han/graduation.jpg'},
   		{ src: 'images/han/onstage.jpg'},
   		{ src: 'images/han/snapchat.jpg'},
-  		{ src: 'images/han/ny.jpg'},
+  		{ src: 'images/han/ny.JPG'},
   		{ src: 'images/han/niece.jpg'}
   	];
   }])
